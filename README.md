@@ -1,16 +1,6 @@
 # Phase 3 -WK3 - Code Challenge: Articles - with database
-
-In this code challenge, you will be working with a Magazine domain.
-
-We have three models: `Author`, `Article`, and `Magazine`.
-
-For our purposes, an `Author` has many `Article`s, a `Magazine` has many
-`Article`s, and `Article`s belong to both `Author` and `Magazine`.
-
-`Author` - `Magazine` is a many to many relationship.
-
-**Note**: You should draw your domain on paper or on a whiteboard _before you
-start coding_. Remember to identify a single source of truth for your data.
+## Magazine & Article Management System.
+Welcome to the Magazine Article Management System! This project is designed to manage the relationships between authors, articles, and magazines. It allows you to create authors, assign articles to them, and link articles to magazines. The system enables exploring various features such as searching for authors by their articles, finding contributors to specific magazines, and more.
 
 ## Set Instructions
 
@@ -19,37 +9,14 @@ To get started, while inside of this directory.
   - run `pipenv shell` to jump into the shell. 
   - run `python3 app.py` to create the database
 
-Build out all of the methods listed in the deliverables. The methods are listed
-in a suggested order, but you can feel free to tackle the ones you think are
-easiest. Be careful: some of the later methods rely on earlier ones.
+## Overview
+The system is built using Python and SQLite, allowing for the management of three main entities:
 
-<!-- **Remember!** This code challenge has tests to help you check your work. You can
-run `pytest` to make sure your code is functional before submitting. -->
+Author
+Magazine
+Article
 
-The folder structure is as follows:
-
-1. On the root folder, we have created the main file and named app.py. make use of it to test your code. You re expected to add more code to test your own implementation.
-
-2. Still on the root path, we have the following folders:
-    - database: Here the most important files are the setup.y where you are expected to write your queries to crate the database. in the same folder, there is another file called connection.py where we have proivded the connection string for your database
-    - models: Here we have created 3 files Article.py, Author.py and Magazine.py wehere you are expected to implement your CRUD methods to interact with the database
-    - tests: Here we have provided few tests to guide you with you own tests
-
-You can add code to the `/app.py` file to define variables and create
-sample instances of your objects.
-
-Writing error-free code is more important than completing all of the
-deliverables listed - prioritize writing methods that work over writing more
-methods that don't work. You should test your code in the console as you write.
-
-Similarly, messy code that works is better than clean code that doesn't. First,
-prioritize getting things working. Then, if there is time at the end, refactor
-your code to adhere to best practices. When you encounter duplicated logic,
-extract it into a shared helper method.
-
-**Before you submit!** Save and run your code to verify that it works as you
-expect. If you have any methods that are not working yet, feel free to leave
-comments describing your progress.
+An Author can have many Articles, and a Magazine can contain many Articles. The relationship between Author and Magazine is many-to-many, where articles link both authors and magazines.
 
 ## Core Deliverables
 
@@ -153,6 +120,42 @@ Write the following methods in the models(Article, Author, magazine) provided in
   - Authors must be of type `Author`
   - Returns `None` if the magazine has no authors with more than 2 publications
 
+## Setup
+Requirements:
+Python 3.x
+SQLite3 (Database)
+
+## Steps to Run:
+Clone the repository to your local machine.
+Install the required dependencies:
+pip install sqlite3
+Run the system in a Python environment.
+
+## Running the Program:
+Open a terminal in the project directory.
+To test the application, simply run pytest to ensure all tests pass.
+
+## Development
+To contribute or develop additional features, follow these steps:
+
+Fork the repository.
+Create a new branch for your feature:
+git checkout -b feature-name
+Commit your changes:
+git commit -m "Your commit message"
+Push the changes to your branch:
+git push origin feature-name
+Open a pull request with a description of the changes made.
+
+## Technologies Used
+Python 3.x: The programming language used to build the system.
+SQLite: The database used to store authors, articles, and magazines.
+Object-Oriented Programming: Employed to model the relationships between authors, articles, and magazines.
+
+## Acknowledgments
+Python: A versatile programming language used to build the system.
+Object-Oriented Programming: Implemented to efficiently manage the relationships between authors, articles, and magazines.
+SQLite: Used for database management and storage of the application data.
 
 
 
