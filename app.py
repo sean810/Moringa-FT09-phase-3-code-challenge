@@ -66,5 +66,24 @@ def main():
     for article in articles:
         print(Article(article["id"], article["title"], article["content"], article["author_id"], article["magazine_id"]))
 
+# Create authors
+author1 = Author("John Doe")
+author2 = Author("Jane Smith")
+
+# Create magazines
+magazine1 = Magazine("Tech Today", "Technology")
+magazine2 = Magazine("Health Weekly", "Health")
+
+# Create articles
+article1 = Article(author1, magazine1, "AI Innovations")
+article2 = Article(author2, magazine1, "The Future of Tech")
+article3 = Article(author1, magazine2, "Healthy Living Tips")
+
+# Test relationships
+print(author1.articles())
+print(magazine1.articles())
+print(magazine1.contributors())
+
+
 if __name__ == "__main__":
     main()
